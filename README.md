@@ -31,7 +31,3 @@ Buka [localhost:3000](http://localhost:3000), pilih mobil, lalu tekan **Start St
 | `P` / `Esc` | Jeda atau lanjut |
 
 Di layar sentuh, gunakan tombol kemudi, gas, rem, dan nitro yang tersedia saat balapan.
-
-## Teknologi dan kredit
-
-Dibuat dengan React, TypeScript, Three.js, dan Vite. Versi **Overpass 2099** dikembangkan dari [Last Gear: City Rush](https://github.com/onad1ocrypto/Last-Gear-City-Rush), dengan penyesuaian judul dan papan LCD **VANTIS GP**.
