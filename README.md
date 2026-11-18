@@ -1,22 +1,37 @@
-# Overpass 2099: Switch Run
+# Overpass 2099
 
-Game balap arcade 2D di jalan layang kota neon. Baca papan petunjuk, pindah ke lajur yang benar sebelum gerbang, dan pertahankan kombo sampai waktu habis.
+Game balap arcade 3D di sirkuit jalanan Neo Vantis. Pilih mobil, ambil tikungan dengan rem tangan, dan gunakan nitro untuk menyalip lawan sambil menghindari lalu lintas kota.
 
-> **Status:** brief build pertama sudah siap. Repo ini belum memuat kode game atau tautan versi yang bisa dimainkan.
+- Balapan melawan pembalap AI dengan checkpoint, hitungan lap, dan posisi balapan.
+- Sirkuit kota dengan jalan layang, jembatan, dan terowongan.
+- Cuaca yang bisa diganti, efek nitro, dan HUD balapan.
 
-## Target prototipe
+## Jalankan game
 
-- **Ronde 60 detik:** mobil melaju otomatis di jalan tiga lajur.
-- **Risiko dan skor:** tiap gerbang yang dilewati di lajur benar menambah skor dan kombo. Pilihan salah menghabiskan satu dari tiga peluang.
-- **Kontrol:** panah kiri/kanan di komputer dan tombol sentuh di HP.
-- **Main ulang:** lihat skor akhir, simpan rekor di browser, dan mulai ronde baru dengan **Retry**.
+Perlu browser dengan WebGL 2, [Bun](https://bun.sh/), dan Node.js yang kompatibel dengan Vite 8 (20.19+ pada seri 20, atau 22.12+).
 
-## Mulai di Base44
+```sh
+bun install --frozen-lockfile
+bun run dev
+```
 
-1. Buka [Base44](https://base44.com/) dan mulai app baru.
-2. Tempel isi [brief build pertama](docs/base44-build-brief.md) ke prompt **Build**.
-3. Di **Preview**, cek bahwa **Play**, perpindahan lajur, kombo, penalti, dan **Retry** berfungsi. Uji juga di layar HP.
+Buka [localhost:3000](http://localhost:3000), pilih mobil, lalu tekan **Start Street Race**. Game tidak perlu akun atau API key. Untuk membuat build produksi, jalankan `bun run build`; hasilnya ada di `dist/`.
 
-## Update repo
+## Kontrol
 
-Setelah prototipe berfungsi, tambahkan file sumber yang benar-benar dibuat atau diubah di Base44. Tulis perubahan dan hasil pengecekan di commit. Jangan unggah `.env`, token, atau `node_modules`. Tambahkan tautan game publik setelah versi yang bisa dimainkan tanpa login dipublikasikan.
+| Tombol | Aksi |
+| --- | --- |
+| `W` / `↑` | Gas |
+| `S` / `↓` | Rem atau mundur |
+| `A` / `←`, `D` / `→` | Belok kiri dan kanan |
+| `Shift` | Nitro |
+| `Space` | Rem tangan |
+| `C` | Ganti cuaca |
+| `R` | Reset posisi mobil |
+| `P` / `Esc` | Jeda atau lanjut |
+
+Di layar sentuh, gunakan tombol kemudi, gas, rem, dan nitro yang tersedia saat balapan.
+
+## Teknologi dan kredit
+
+Dibuat dengan React, TypeScript, Three.js, dan Vite. Versi **Overpass 2099** dikembangkan dari [Last Gear: City Rush](https://github.com/onad1ocrypto/Last-Gear-City-Rush), dengan penyesuaian judul dan papan LCD **VANTIS GP**.

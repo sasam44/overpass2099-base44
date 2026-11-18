@@ -1,0 +1,8 @@
+{
+  "name": "Overpass 2099",
+  "description": "Experience high-speed 3D street racing through a futuristic metropolis against competitive AI opponents and dynamic urban traffic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
